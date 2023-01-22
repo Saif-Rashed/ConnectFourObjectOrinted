@@ -1,0 +1,147 @@
+/* Container */
+
+#game-container {
+  background-color: #f2f2f2;
+  border: solid 1px #ccc;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  background-color: black;
+}
+
+#game-title {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+}
+
+#input-container {
+  display: flex; /* enable flexbox layout */
+  justify-content: center; /* center elements horizontally */
+  align-items: center; /* center elements vertically */
+  margin-top: 1%;
+}
+
+button {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  height: 40px;
+  margin-left: 8px;
+}
+
+button:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+#p1-color,
+#p2-color {
+  width: 300px; /* Increase the width of the input field */
+  height: 40px; /* Increase the height of the input field */
+  font-size: 20px;
+}
+
+/* #game-logo {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 0;
+} */
+
+#game-rules {
+  position: absolute;
+  bottom: 10;
+  left: 0;
+  width: 250px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+/* game board table */
+#board {
+  background-color: #f5f5f5;
+  border: solid 5px #333;
+  border-radius: 10px;
+  background: linear-gradient(#f5f5f5, rgb(168, 202, 239));
+  margin-left: 30%;
+  margin-top: 3%;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+}
+
+#board td > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 8;
+  margin: 0;
+}
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  #game-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  #game {
+    width: 90vw;
+  }
+}
